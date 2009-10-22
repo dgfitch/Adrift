@@ -1,11 +1,11 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("util/geom.lua")
-love.filesystem.require("objects/composable/Convex.lua")
-love.filesystem.require("objects/composable/Engine.lua")
-love.filesystem.require("objects/composable/SimpleGun.lua")
-love.filesystem.require("objects/composable/Projectile.lua")
-love.filesystem.require("objects/composable/DamageableObject.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
+require("oo.lua")
+require("util/geom.lua")
+require("objects/composable/Convex.lua")
+require("objects/composable/Engine.lua")
+require("objects/composable/SimpleGun.lua")
+require("objects/composable/Projectile.lua")
+require("objects/composable/DamageableObject.lua")
+require("objects/composable/SimplePhysicsObject.lua")
 
 
 Hornet = {

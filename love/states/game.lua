@@ -1,7 +1,7 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/DamageableObject.lua")
-love.filesystem.require("objects/composable/CollectibleObject.lua")
-love.filesystem.require("objects/goodies/WarpPortal.lua")
+require("oo.lua")
+require("objects/composable/DamageableObject.lua")
+require("objects/composable/CollectibleObject.lua")
+require("objects/goodies/WarpPortal.lua")
 
 state.game = {
   

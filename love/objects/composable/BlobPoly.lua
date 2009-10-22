@@ -1,4 +1,5 @@
-love.filesystem.require("oo.lua")
+require("oo.lua")
+
 BlobPoly = {
   color = love.graphics.newColor(200,200,200),
   color_edge = love.graphics.newColor(100,100,100),

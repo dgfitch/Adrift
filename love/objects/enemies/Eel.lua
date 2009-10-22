@@ -1,10 +1,10 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
-love.filesystem.require("objects/composable/DamageableObject.lua")
-love.filesystem.require("objects/composable/Convex.lua")
-love.filesystem.require("objects/composable/Thruster.lua")
-love.filesystem.require("objects/composable/Projectile.lua")
-love.filesystem.require("objects/goodies/EnergyPowerup.lua")
+require("oo.lua")
+require("objects/composable/SimplePhysicsObject.lua")
+require("objects/composable/DamageableObject.lua")
+require("objects/composable/Convex.lua")
+require("objects/composable/Thruster.lua")
+require("objects/composable/Projectile.lua")
+require("objects/goodies/EnergyPowerup.lua")
 
 Eel = {
   super = SimplePhysicsObject,

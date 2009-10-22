@@ -1,7 +1,7 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
-love.filesystem.require("objects/composable/DamageableObject.lua")
-love.filesystem.require("objects/enemies/Hornet.lua")
+require("oo.lua")
+require("objects/composable/SimplePhysicsObject.lua")
+require("objects/composable/DamageableObject.lua")
+require("objects/enemies/Hornet.lua")
 
 HornetEgg = {
 

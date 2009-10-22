@@ -1,6 +1,6 @@
 require 'lunity'
 require 'love_test'
-love.filesystem.require("util/geom.lua")
+require("util/geom.lua")
 module( 'TEST_GEOM', lunity )
 
 function test_IntersectParallel()

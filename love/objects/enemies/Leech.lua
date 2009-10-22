@@ -1,6 +1,6 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/DamageableObject.lua")
-love.filesystem.require("objects/composable/MultipleBlobObject.lua")
+require("oo.lua")
+require("objects/composable/DamageableObject.lua")
+require("objects/composable/MultipleBlobObject.lua")
 
 
 Leech = {

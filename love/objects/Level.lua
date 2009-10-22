@@ -1,4 +1,4 @@
-love.filesystem.require("oo.lua")
+require("oo.lua")
 
 Level = {
   margin = 1,

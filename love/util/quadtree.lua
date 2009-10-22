@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("util/geom.lua")
+require("oo.lua")
+require("util/geom.lua")
 
 -- I'm going to attempt a standard quadtree for rectangle storage and 
 -- retrieval. I want overlap retrieval to be blazing fast, and fast

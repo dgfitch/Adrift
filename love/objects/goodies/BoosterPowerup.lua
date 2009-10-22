@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/CollectibleObject.lua")
+require("oo.lua")
+require("objects/composable/CollectibleObject.lua")
 
 BoosterPowerup = {
   super = CollectibleObject,

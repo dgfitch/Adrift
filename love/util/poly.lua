@@ -1,8 +1,6 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("util/geom.lua")
-love.filesystem.require("util/string.lua")
-
-debug = false
+require("oo.lua")
+require("util/geom.lua")
+require("util/string.lua")
 
 function table.shallow_copy(t)
   local t2 = {}

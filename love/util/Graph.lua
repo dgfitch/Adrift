@@ -1,6 +1,6 @@
-love.filesystem.require("util/geom.lua")
-love.filesystem.require("util/PriorityQueue.lua")
-love.filesystem.require("oo.lua")
+require("util/geom.lua")
+require("util/PriorityQueue.lua")
+require("oo.lua")
 
 Graph = {
 

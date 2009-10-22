@@ -1,6 +1,6 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("util/geom.lua")
-love.filesystem.require("util/util.lua")
+require("oo.lua")
+require("util/geom.lua")
+require("util/util.lua")
 
 Power = {
   cooldown = 0,

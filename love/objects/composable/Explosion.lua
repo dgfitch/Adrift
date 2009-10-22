@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/GameObject.lua")
+require("oo.lua")
+require("objects/composable/GameObject.lua")
 
 Explosion = {
   super = GameObject,

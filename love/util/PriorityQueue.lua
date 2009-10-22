@@ -1,4 +1,4 @@
-love.filesystem.require("oo.lua")
+require("oo.lua")
 
 
 -- TODO: add an index so we can find a given item in the heap supa-fast?

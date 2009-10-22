@@ -1,6 +1,6 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/CollectibleObject.lua")
-love.filesystem.require("graphics/RepresentableAsImage.lua")
+require("oo.lua")
+require("objects/composable/CollectibleObject.lua")
+require("graphics/RepresentableAsImage.lua")
 
 WarpCrystal = {
   super = CollectibleObject,

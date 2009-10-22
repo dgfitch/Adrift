@@ -1,7 +1,7 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
-love.filesystem.require("objects/composable/PortalSystem.lua")
-love.filesystem.require("graphics/RepresentableAsImage.lua")
+require("oo.lua")
+require("objects/composable/SimplePhysicsObject.lua")
+require("objects/composable/PortalSystem.lua")
+require("graphics/RepresentableAsImage.lua")
 
 WarpPortal = {
   super = SimplePhysicsObject,

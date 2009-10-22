@@ -1,4 +1,4 @@
-love.filesystem.require("util/string.lua")
+require("util/string.lua")
 
 geom = {
 

@@ -1,10 +1,10 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
-love.filesystem.require("objects/composable/Power.lua")
-love.filesystem.require("objects/ControlSchemes.lua")
-love.filesystem.require("objects/SimpleBullet.lua")
-love.filesystem.require("objects/HomingMissile.lua")
-love.filesystem.require("objects/ProximityMine.lua")
+require("oo.lua")
+require("objects/composable/SimplePhysicsObject.lua")
+require("objects/composable/Power.lua")
+require("objects/ControlSchemes.lua")
+require("objects/SimpleBullet.lua")
+require("objects/HomingMissile.lua")
+require("objects/ProximityMine.lua")
 
 Ship = {
   super = SimplePhysicsObject,

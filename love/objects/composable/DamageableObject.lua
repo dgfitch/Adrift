@@ -1,6 +1,6 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
-love.filesystem.require("objects/composable/Explosion.lua")
+require("oo.lua")
+require("objects/composable/SimplePhysicsObject.lua")
+require("objects/composable/Explosion.lua")
 
 DamageableObject = {
 

@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/SimpleBullet.lua")
+require("oo.lua")
+require("objects/SimpleBullet.lua")
 
 SimpleGun = {
 

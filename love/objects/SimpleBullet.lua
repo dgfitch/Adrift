@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/Projectile.lua")
+require("oo.lua")
+require("objects/composable/Projectile.lua")
 
 SimpleBullet = {
   super = Projectile,

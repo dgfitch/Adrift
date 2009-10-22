@@ -1,6 +1,6 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/GameObject.lua")
-love.filesystem.require("objects/composable/BlobPoly.lua")
+require("oo.lua")
+require("objects/composable/GameObject.lua")
+require("objects/composable/BlobPoly.lua")
 
 Blob = {
   super = GameObject,

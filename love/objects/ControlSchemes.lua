@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("util/geom.lua")
+require("oo.lua")
+require("util/geom.lua")
 
 -- return up, left, down, right, fire
 keyboardInput = function()

@@ -1,6 +1,6 @@
 require 'lunity'
 require 'love_test'
-love.filesystem.require("util/triangle.lua")
+require("util/triangle.lua")
 module( 'TEST_TRIANGLE', lunity )
 
 function test_MakesTriangles()

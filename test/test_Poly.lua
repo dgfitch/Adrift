@@ -1,6 +1,6 @@
 require 'lunity'
 require 'love_test'
-love.filesystem.require("util/poly.lua")
+require("util/poly.lua")
 module( 'TEST_POLY', lunity )
 
 function test_Create()

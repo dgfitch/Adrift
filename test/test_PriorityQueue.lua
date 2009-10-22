@@ -1,6 +1,6 @@
 require 'lunity'
 require 'love_test'
-love.filesystem.require("util/PriorityQueue.lua")
+require("util/PriorityQueue.lua")
 module( 'TEST_PRIORITY_QUEUE', lunity )
 
 function test_Create()

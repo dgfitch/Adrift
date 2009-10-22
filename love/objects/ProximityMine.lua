@@ -1,5 +1,5 @@
-love.filesystem.require("oo.lua")
-love.filesystem.require("objects/composable/SimplePhysicsObject.lua")
+require("oo.lua")
+require("objects/composable/SimplePhysicsObject.lua")
 
 ProximityMine = {
   super = SimplePhysicsObject,

@@ -1,6 +1,6 @@
 require 'lunity'
 require 'love_test'
-love.filesystem.require("util/quadtree.lua")
+require("util/quadtree.lua")
 module( 'TEST_QUADTREE', lunity )
 
 function test_SimpleStore()
