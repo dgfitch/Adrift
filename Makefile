@@ -24,3 +24,6 @@ build: clean
 
 run: build
 	open $(NAME).love	
+
+beta: build
+	../beta/love.app/Contents/MacOS/love $(NAME).love	

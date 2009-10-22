@@ -1,4 +1,4 @@
-load = function()
+love.load = function()
   math.randomseed(os.time())
   require("oo.lua")
   require("util/util.lua")
@@ -16,23 +16,23 @@ load = function()
   if useJoystick then love.joystick.open(0) end
 end
 
-update = function(dt)
+love.update = function(dt)
   if not love.audio.isPlaying() then love.audio.play(sound.bgm) end
   dt = math.min(dt, 1/15)
   state.current:update(dt)
 end
 
-draw = function()
+love.draw = function()
   state.current:draw()
   if state.repl.active then state.repl:draw() end 
   logger:draw()
 end
 
-mousepressed = function(x, y, button)
+love.mousepressed = function(x, y, button)
   state.current:mousepressed(x, y, button)
 end
 
-keypressed = function(key)
+love.keypressed = function(key)
   if state.repl.active then
     if key==love.key_escape or key==love.key_tab then
       state.repl.active = false
@@ -50,7 +50,7 @@ keypressed = function(key)
   end
 end
 
-joystickpressed = function(j,b)
+love.joystickpressed = function(j,b)
   if state.current.joystickpressed ~= nil then state.current:joystickpressed(j,b) end
 end
 
