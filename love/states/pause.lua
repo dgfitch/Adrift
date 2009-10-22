@@ -1,11 +1,11 @@
 state.pause = {
   
-  shipMapColor = love.graphics.newColor(255,255,255),
-  enemyMapColor = love.graphics.newColor(255,0,0),
-  powerupMapColor = love.graphics.newColor(128,255,128),
-  crystalMapColor = love.graphics.newColor(128,192,255),
-  portalMapColor = love.graphics.newColor(128,192,255),
-  otherMapColor = love.graphics.newColor(128,128,128),
+  shipMapColor = {255,255,255},
+  enemyMapColor = {255,0,0},
+  powerupMapColor = {128,255,128},
+  crystalMapColor = {128,192,255},
+  portalMapColor = {128,192,255},
+  otherMapColor = {128,128,128},
   
   
   update = function(s,dt)
@@ -21,19 +21,19 @@ state.pause = {
           local x,y,w = L:xyMap(wx,wy)
           if v.type == objects.ships then
             if v.friendly then
-              love.graphics.setColor(s.shipMapColor)
+              lib.setColor(s.shipMapColor)
               w = w*2
             else
-              love.graphics.setColor(s.enemyMapColor)
+              lib.setColor(s.enemyMapColor)
             end
           elseif v.type == objects.powerups then
-            love.graphics.setColor(s.powerupMapColor)
+            lib.setColor(s.powerupMapColor)
           elseif v.type == objects.warpCrystal then
-            love.graphics.setColor(s.crystalMapColor)
+            lib.setColor(s.crystalMapColor)
           elseif v.type == objects.startingSpot then
-            love.graphics.setColor(s.portalMapColor)
+            lib.setColor(s.portalMapColor)
           else
-            love.graphics.setColor(s.otherMapColor)
+            lib.setColor(s.otherMapColor)
             w = w/2
           end
           love.graphics.rectangle(love.draw_fill,x-w/2,y-w/2,w,w)
@@ -42,7 +42,7 @@ state.pause = {
     end
     local wx,wy = g.ship.body:getPosition()
     local x,y,w = L:xyMap(wx,wy)
-    love.graphics.setColor(s.shipMapColor)
+    lib.setColor(s.shipMapColor)
     love.graphics.rectangle(love.draw_fill,x-w,y-w,w*2,w*2)
 
   end,

@@ -1,5 +1,6 @@
 love.load = function()
   math.randomseed(os.time())
+  require("lib.lua")
   require("oo.lua")
   require("util/util.lua")
   require("objects/objects.lua")
@@ -7,17 +8,13 @@ love.load = function()
   require("sound/sound.lua")
   require("states/states.lua")
   love.mouse.setVisible(false)
-  love.graphics.setFont(love.default_font)
   state.current = state.menu
-  love.audio.setChannels(4)
-  love.audio.setVolume(0.9)
   love.audio.play(sound.bgm)
   useJoystick = (love.joystick.getNumJoysticks() > 0)
   if useJoystick then love.joystick.open(0) end
 end
 
 love.update = function(dt)
-  if not love.audio.isPlaying() then love.audio.play(sound.bgm) end
   dt = math.min(dt, 1/15)
   state.current:update(dt)
 end
@@ -65,7 +62,7 @@ logger = {
   draw = function(l)
     for k,v in ipairs(l.messages) do
       local timely = 255*math.exp((v.time - os.time())/3)
-      love.graphics.setColor(255,255,255,timely)
+      lib.setColor(255,255,255,timely)
       love.graphics.draw(v.msg, 10,k*20)
       if timely < 32 then v.dead = true end 
     end

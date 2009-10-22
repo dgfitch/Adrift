@@ -7,7 +7,7 @@ local options = {
 
 local supplemental = {
   draw = function(sup,s)
-    love.graphics.setColor(s.normalColor)
+    lib.setColor(s.normalColor)
     love.graphics.draw("Crystal: Find the warp crystal and return it to the warp portal at the beginning of the level to advance.", 75, 150)
     love.graphics.draw("Controls: Pilot your ship using the arrow keys, joystick, or gamepad.", 75, 175)
     love.graphics.draw("Controls: Radial style: Turn, thrust forward, or reverse.",75,200)

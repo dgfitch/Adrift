@@ -77,10 +77,10 @@ local supplemental = {
   draw = function(sup, s)
     local controlsOption = s.options[state.options.controlScheme]
     local difficultyOption = s.options[state.options.difficulty + 6]
-    love.graphics.setColor(s.highlightColor)
+    lib.setColor(s.highlightColor)
     love.graphics.circle(love.draw_fill, controlsOption.x - 30, controlsOption.y - 4, 8, 32)
     love.graphics.circle(love.draw_fill, difficultyOption.x - 30, difficultyOption.y - 4, 8, 32)
-    love.graphics.setColor(s.normalColor)
+    lib.setColor(s.normalColor)
     love.graphics.line(400,425,400,600)
     love.graphics.line(400,425,000,425)
     love.graphics.line(650,75,000,75)

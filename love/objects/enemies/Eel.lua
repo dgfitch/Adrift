@@ -13,8 +13,8 @@ Eel = {
   action = nil,
   
   cvx = nil,
-    lineColor = love.graphics.newColor(255,64,64),
-    fillColor = love.graphics.newColor(192,0,0),
+    lineColor = {255,64,64},
+    fillColor = {192,0,0},
     
   
   thruster = nil,
@@ -22,8 +22,8 @@ Eel = {
     thrust = 12,
     
   shockCounter = 0,
-  shockColor = love.graphics.newColor(255,255,255),
-  cooldownColor = love.graphics.newColor(255,160,160),
+  shockColor = {255,255,255},
+  cooldownColor = {255,160,160},
   shockSound = love.audio.newSound("sound/shock.ogg"),
   
   deathSound = love.audio.newSound("sound/hornetDeath.ogg"),

@@ -6,8 +6,8 @@ require("objects/composable/MultipleBlobObject.lua")
 Leech = {
   super = MultipleBlobObject,
   
-  color = love.graphics.newColor(30,200,60),
-  color_edge = love.graphics.newColor(20,100,50),
+  color = {30,200,60},
+  color_edge = {20,100,50},
   
   deathSound = love.audio.newSound("sound/hornetDeath.ogg"),
   

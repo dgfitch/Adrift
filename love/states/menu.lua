@@ -2,8 +2,8 @@ getMenu = function(opts, extras)
   
   return {
     
-    normalColor = love.graphics.newColor(128,128,128),
-    highlightColor = love.graphics.newColor(255,255,255),
+    normalColor = {128,128,128},
+    highlightColor = {255,255,255},
     
     xMargin = 15,
     yMargin = 13,
@@ -14,7 +14,7 @@ getMenu = function(opts, extras)
       cooldown = 0,
       
       draw = function(c,s) 
-        love.graphics.setColor(s.highlightColor)
+        lib.setColor(s.highlightColor)
         local so = s.options[c.selected]
         love.graphics.rectangle(love.draw_line,so.x - s.xMargin,so.y - s.yMargin,so.w,so.h)
       end,
@@ -56,9 +56,9 @@ getMenu = function(opts, extras)
     draw = function(s) 
       s.cursor:draw(s)
       s.supplemental:draw(s)
-      love.graphics.setColor(s.normalColor)
+      lib.setColor(s.normalColor)
       for k,v in ipairs(s.options) do
-        love.graphics.draw(v.text,v.x,v.y)
+        love.graphics.print(v.text,v.x,v.y)
       end
     end,
     
@@ -109,7 +109,7 @@ local options = {
 
 local supplemental = {
   draw = function(sup,s)
-    love.graphics.setColor(s.normalColor)
+    lib.setColor(s.normalColor)
     love.graphics.line(425,150,425,450)
     love.graphics.line(600,150,600,450)
     love.graphics.line(275,0,425,150)

@@ -5,11 +5,11 @@ require("objects/goodies/WarpPortal.lua")
 
 state.game = {
   
-  spColor = love.graphics.newColor(0,0,255),
-  wcColor = love.graphics.newColor(255,0,0),
-  scoreColor = love.graphics.newColor(255,255,255),
-  normalArcColor = love.graphics.newColor(128,128,128),
-  normalNodeColor = love.graphics.newColor(255,255,255),
+  spColor = {0,0,255},
+  wcColor = {255,0,0},
+  scoreColor = {255,255,255},
+  normalArcColor = {128,128,128},
+  normalNodeColor = {255,255,255},
   score = 0,
   
   load = function(s)
@@ -64,7 +64,7 @@ state.game = {
     if not s.waitingForNextLevel then
       s.background:draw(12)
       s.level:draw(0)
-      love.graphics.setColor(s.scoreColor)
+      lib.setColor(s.scoreColor)
       if state.current == state.game then love.graphics.draw("Score: " .. tostring(s.score),15,580) end
       s.ship:draw()
     end

@@ -50,9 +50,9 @@ Convex = {
     self:_rotatePoints(self.parent.angle)
     self:_projectPoints()
     
-    love.graphics.setColor(self.fillColor)
+    lib.setColor(self.fillColor)
     love.graphics.polygon(love.draw_fill, unpack(self._projectedPoints))
-    love.graphics.setColor(self.lineColor)
+    lib.setColor(self.lineColor)
     love.graphics.polygon(love.draw_line, unpack(self._projectedPoints))
   end,
   

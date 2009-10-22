@@ -17,15 +17,15 @@ Ship = {
   controller = nil,
   
   gun = nil,
-  bulletColor = love.graphics.newColor(0,0,255),
-  bulletHighlightColor = love.graphics.newColor(100,100,255,200),
-  missileTrailColor = love.graphics.newColor(220,220,230,220),
+  bulletColor = {0,0,255},
+  bulletHighlightColor = {100,100,255,200},
+  missileTrailColor = {220,220,230,220},
   
   
-  circColor = love.graphics.newColor(32,64,128),
-  triColor = love.graphics.newColor(64,128,255),
-  cryColor = love.graphics.newColor(255,255,255),
-  healthColor = love.graphics.newColor(255,255,255),
+  circColor = {32,64,128},
+  triColor = {64,128,255},
+  cryColor = {255,255,255},
+  healthColor = {255,255,255},
   
   hasCrystal = false,
   hasFieldDetector = false,
@@ -120,7 +120,7 @@ Ship = {
   draw = function(self)
     self.thruster:draw()
 
-    love.graphics.setColor(self.circColor)
+    lib.setColor(self.circColor)
     local cx, cy, radius = L:xy(self.x,self.y,0)
     love.graphics.circle(love.draw_fill,cx,cy,0.375*radius,32)
     
@@ -140,7 +140,7 @@ Ship = {
   
   drawHUD = function(self)
     if state.current == state.game then
-      love.graphics.setColor(self.healthColor)
+      lib.setColor(self.healthColor)
       love.graphics.rectangle(love.draw_fill,100,590, 700 * self.armor / self.maxArmor,10)
       love.graphics.draw("HP: " .. tostring(self.armor) .. " / " .. tostring(self.maxArmor), 15,598)
     end

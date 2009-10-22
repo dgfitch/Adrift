@@ -44,9 +44,9 @@ Blob = {
   draw = function(self)
     for i,poly in ipairs(self.polys) do
       local points = poly:projectPoints(self.x, self.y, self.angle)
-      love.graphics.setColor(poly.color)
+      lib.setColor(poly.color)
       love.graphics.polygon(love.draw_fill, unpack(points))
-      love.graphics.setColor(poly.color_edge)
+      lib.setColor(poly.color_edge)
       love.graphics.polygon(love.draw_line, unpack(points))
     end
   end,

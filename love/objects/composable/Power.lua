@@ -60,7 +60,7 @@ Power = {
     if not self.active and self:isCooling() then
       love.graphics.setColorMode(love.color_modulate)
       love.graphics.setBlendMode(love.blend_additive)
-      love.graphics.setColor(self.color)
+      lib.setColor(self.color)
       love.graphics.circle(love.draw_line, x, y, s * 0.3 * (self.cooldown_time - self.cooldown_speed), 32)
       love.graphics.setBlendMode(love.blend_normal)
       love.graphics.setColorMode(love.color_normal)
@@ -97,7 +97,7 @@ BoostPower = {
   end,
   
   create = function(self,parent)
-    local result = Power:create(parent, love.graphics.newColor(255,200,20,50), BoostPower.default_cooldown_speed, 0.2, BoostPower.fstart, nil, nil, BoostPower.fend, BoostPower.fdraw)
+    local result = Power:create(parent, {255,200,20,50}, BoostPower.default_cooldown_speed, 0.2, BoostPower.fstart, nil, nil, BoostPower.fend, BoostPower.fdraw)
     result.thrust_increment = BoostPower.default_thrust_increment
     return result
   end
@@ -137,7 +137,7 @@ SidestepPower = {
   end,
   
   create = function(self, parent)
-    return Power:create(parent, love.graphics.newColor(100,100,255,50), 0, 0.2, SidestepPower.fstart, SidestepPower.factive, nil, SidestepPower.fend)
+    return Power:create(parent, {100,100,255,50}, 0, 0.2, SidestepPower.fstart, SidestepPower.factive, nil, SidestepPower.fend)
   end
 
 }
@@ -228,6 +228,6 @@ TeleportPower = {
   end,
   
   create = function(self, ship)
-    return Power:create(ship, love.graphics.newColor(100,100,255,50), 5, 0.2, TeleportPower.fstart, TeleportPower.factive, TeleportPower.finactive, TeleportPower.fend, TeleportPower.fdraw)
+    return Power:create(ship, {100,100,255,50}, 5, 0.2, TeleportPower.fstart, TeleportPower.factive, TeleportPower.finactive, TeleportPower.fend, TeleportPower.fdraw)
   end
 }

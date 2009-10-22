@@ -62,8 +62,8 @@ Thruster = {
 FireThruster = {
 
   fireImage = love.graphics.newImage("graphics/fire.png"),
-  fireColor = love.graphics.newColor(255, 255, 64, 255),
-  fadeColor = love.graphics.newColor(255, 200, 0, 0),
+  fireColor = {255, 255, 64, 255},
+  fadeColor = {255, 200, 0, 0},
 
   create = function(self, parent, direction)
     return Thruster:create(parent, direction, self.fireImage, self.fireColor, self.fadeColor)

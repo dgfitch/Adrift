@@ -6,7 +6,7 @@ HomingMissile = {
   speed = 5,
   radius = 0.1,
   damage = 2,
-  missileFadeColor = love.graphics.newColor(128,128,128,0),
+  missileFadeColor = {128,128,128,0},
 
   touchDamageable = function(self,d) 
     if not self.dead then
@@ -35,7 +35,7 @@ HomingMissile = {
     love.graphics.setColorMode(love.color_modulate)
     love.graphics.draw(b.smoke,x,y)
     love.graphics.setColorMode(love.color_normal)
-    love.graphics.setColor(b.color)
+    lib.setColor(b.color)
     love.graphics.circle(love.draw_fill,x,y,b.radius*scale,16)
   end,
   

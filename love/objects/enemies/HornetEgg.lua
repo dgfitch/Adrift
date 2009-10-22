@@ -9,16 +9,16 @@ HornetEgg = {
   
   numHornets = 6,
   
-  lineColor = love.graphics.newColor(255,0,0),
-  fillColor = love.graphics.newColor(128,96,64),
+  lineColor = {255,0,0},
+  fillColor = {128,96,64},
   
   hatchSound = love.audio.newSound("sound/hornetHatch.ogg"),
   
   draw = function(self)
     local x, y, s = L:xy(self.x, self.y, 0)
-    love.graphics.setColor(self.fillColor)
+    lib.setColor(self.fillColor)
     love.graphics.circle(love.draw_fill, x, y, s, 12)
-    love.graphics.setColor(self.lineColor)
+    lib.setColor(self.lineColor)
     love.graphics.circle(love.draw_line, x, y, s, 12)
   end,
   

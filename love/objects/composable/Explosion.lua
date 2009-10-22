@@ -103,12 +103,12 @@ FireyExplosion = {
       slowdown = false,
 
       brightImage = love.graphics.newImage("graphics/spark.png"),
-      brightStart = love.graphics.newColor(255, 216, 192, 255),
-      brightFade = love.graphics.newColor(220, 64, 0, 200),
+      brightStart = {255, 216, 192, 255},
+      brightFade = {220, 64, 0, 200},
       
       smokeImage = love.graphics.newImage("graphics/smoke.png"),
-      smokeStart = love.graphics.newColor(128,128,128,200),
-      smokeFade = love.graphics.newColor(64,64,64,0),
+      smokeStart = {128,128,128,200},
+      smokeFade = {64,64,64,0},
     })
   end
 }
@@ -125,12 +125,12 @@ EggExplosion = {
       slowdown = true,
 
       brightImage = love.graphics.newImage("graphics/smoke.png"),
-      brightStart = love.graphics.newColor(255, 32, 32, 230),
-      brightFade = love.graphics.newColor(220, 0, 128, 0),
+      brightStart = {255, 32, 32, 230},
+      brightFade = {220, 0, 128, 0},
       
       smokeImage = love.graphics.newImage("graphics/smoke.png"),
-      smokeStart = love.graphics.newColor(128,64,128,200),
-      smokeFade = love.graphics.newColor(64,32,64,0),
+      smokeStart = {128,64,128,200},
+      smokeFade = {64,32,64,0},
     })
   end
 }
@@ -147,12 +147,12 @@ DustExplosion = {
       slowdown = true,
 
       brightImage = love.graphics.newImage("graphics/smoke.png"),
-      brightStart = love.graphics.newColor(128, 128, 128, 200),
-      brightFade = love.graphics.newColor(128, 128, 128, 0),
+      brightStart = {128, 128, 128, 200},
+      brightFade = {128, 128, 128, 0},
       
       smokeImage = love.graphics.newImage("graphics/smoke.png"),
-      smokeStart = love.graphics.newColor(192,192,192,180),
-      smokeFade = love.graphics.newColor(64,64,64,0),
+      smokeStart = {192,192,192,180},
+      smokeFade = {64,64,64,0},
     })
   end
 }

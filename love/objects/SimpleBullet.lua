@@ -39,7 +39,7 @@ SimpleBullet = {
     love.graphics.draw(b.sparks,x,y)
     love.graphics.draw(b.muzzleflash,ox,oy)
     love.graphics.setColorMode(love.color_normal)
-    --love.graphics.setColor(b.color)
+    --lib.setColor(b.color)
     --love.graphics.circle(love.draw_fill,x,y,b.radius*scale/2,16)
   end,
   

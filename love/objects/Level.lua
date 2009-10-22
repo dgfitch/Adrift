@@ -16,13 +16,13 @@ Level = {
     z = -30,
 
     EXPLORED = 1000,
-    solidMapColor = love.graphics.newColor(64,64,128),
-    wallMapColor = love.graphics.newColor(112,112,168),
+    solidMapColor = {64,64,128},
+    wallMapColor = {112,112,168},
     
     colors = {
-      love.graphics.newColor(0,0,0),
-      love.graphics.newColor(96,64,32),
-      love.graphics.newColor(192,128,64),
+      {0,0,0},
+      {96,64,32},
+      {192,128,64},
     }
   },
 
@@ -106,10 +106,10 @@ Level = {
           local yVal = 800*(square - c.y)/fovX + 300
           if column[square] > 0 and column[square] ~= c.EXPLORED then
             if column[square]==1 or column[square]==(1+c.EXPLORED) then
-              love.graphics.setColor(level.colors[square].normal)
+              lib.setColor(level.colors[square].normal)
               column[square] = 1 + c.EXPLORED
             elseif column[square]==2 or column[square]==(2+c.EXPLORED) then
-              love.graphics.setColor(level.colors[square].highlight)
+              lib.setColor(level.colors[square].highlight)
               column[square] = 2 + c.EXPLORED
             end
             love.graphics.rectangle(love.draw_fill,xVal,yVal,800/fovX,800/fovX)
@@ -134,10 +134,10 @@ Level = {
           local yVal = util.interpolate(tly,bry,square/level.maxRow)
           local sq = column[square] % c.EXPLORED
           if sq == 1 then
-            love.graphics.setColor(c.solidMapColor)
+            lib.setColor(c.solidMapColor)
             love.graphics.rectangle(love.draw_fill,xVal,yVal,sc,sc)
           elseif sq == 2 then
-            love.graphics.setColor(c.wallMapColor)
+            lib.setColor(c.wallMapColor)
             love.graphics.rectangle(love.draw_fill,xVal,yVal,sc,sc)
           end
         end
@@ -411,8 +411,8 @@ Level = {
       lumR = math.min(1,math.max(0,lumR))
       lumG = math.min(1,math.max(0,lumG))
       lumB = math.min(1,math.max(0,lumB))
-      local col1 = love.graphics.newColor(96*lumR,64*lumG,32*lumB)
-      local col2 = love.graphics.newColor(196*lumR, 128*lumG, 64*lumB)
+      local col1 = {96*lumR,64*lumG,32*lumB}
+      local col2 = {196*lumR, 128*lumG, 64*lumB}
       local colors = {normal = col1, highlight = col2}
       table.insert(level.colors,colors)
     end

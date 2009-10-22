@@ -12,10 +12,10 @@ Hornet = {
   super = SimplePhysicsObject,
   
   cvx = nil,
-  color = love.graphics.newColor(255,0,0),
+  color = {255,0,0},
   
-  bulletColor = love.graphics.newColor(255,0,0),
-  bulletHighlightColor = love.graphics.newColor(255,100,100,200),
+  bulletColor = {255,0,0},
+  bulletHighlightColor = {255,100,100,200},
   
   thruster = nil,
   engine = nil,

@@ -77,10 +77,10 @@ PortalSystem = {
 
 PortalHoleSystem = {
   create = function(self)
-    local hazeIntense = love.graphics.newColor(255,200,255,200)
-    local hazeFade = love.graphics.newColor(64,20,128,64)
-    local darkIntense = love.graphics.newColor(24,0,32,200)
-    local darkFade = love.graphics.newColor(0,0,0,64)
+    local hazeIntense = {255,200,255,200}
+    local hazeFade = {64,20,128,64}
+    local darkIntense = {24,0,32,200}
+    local darkFade = {0,0,0,64}
     local r = PortalSystem:create(0, 10, 2, hazeIntense, hazeFade, darkIntense, darkFade)
 
     r.draw = function(self, x, y)
@@ -107,10 +107,10 @@ PortalHoleSystem = {
 
 PortalTeleportSystem = {
   create = function(self, x, y, angle)
-    local hazeIntense = love.graphics.newColor(64,128,255,80)
-    local hazeFade = love.graphics.newColor(20,64,128,8)
-    local darkIntense = love.graphics.newColor(24,0,32,80)
-    local darkFade = love.graphics.newColor(0,0,0,16)
+    local hazeIntense = {64,128,255,80}
+    local hazeFade = {20,64,128,8}
+    local darkIntense = {24,0,32,80}
+    local darkFade = {0,0,0,16}
     local r = PortalSystem:create(0.5, 1, 0.1, hazeIntense, hazeFade, darkIntense, darkFade)
     r.x = x
     r.y = y

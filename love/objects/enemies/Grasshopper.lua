@@ -12,8 +12,8 @@ Grasshopper = {
   touchedWall = false,
   excited = false,
 
-  color = love.graphics.newColor(10,150,30),
-  color_edge = love.graphics.newColor(20,120,60),
+  color = {10,150,30},
+  color_edge = {20,120,60},
   
   deathSound = love.audio.newSound("sound/hornetDeath.ogg"),
   damageSound = love.audio.newSound("sound/bulletStrike.ogg"),

@@ -5,8 +5,8 @@ ProximityMine = {
   super = SimplePhysicsObject,
   radius = 0.3,
   damage = 3,
-  smokeColor = love.graphics.newColor(200,200,200,180),
-  smokeFadeColor = love.graphics.newColor(128,128,128,0),
+  smokeColor = {200,200,200,180},
+  smokeFadeColor = {128,128,128,0},
 
   explode = function(self,d) 
     if not self.dead then
@@ -29,7 +29,7 @@ ProximityMine = {
     love.graphics.setColorMode(love.color_modulate)
     love.graphics.draw(b.smoke,x,y)
     love.graphics.setColorMode(love.color_normal)
-    love.graphics.setColor(b.color)
+    lib.setColor(b.color)
     love.graphics.circle(love.draw_fill,x,y,b.radius*scale,32)
   end,
   
